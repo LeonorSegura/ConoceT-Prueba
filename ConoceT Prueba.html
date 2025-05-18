@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Conoce-T Centro Psicológico</title>
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background-image: url('https://github.com/Per-Arredondo/Clinica_medica/blob/main/Fondo%20JPG.jpeg?raw=true');
+      background-size: cover;
+      background-attachment: fixed;
+    }
+    .accordion {
+      @apply bg-purple-100 px-4 py-2 rounded-xl font-bold text-left w-full mt-2 cursor-pointer;
+    }
+    .panel {
+      @apply bg-purple-50 p-3 rounded-xl mb-2 hidden;
+    }
+  </style>
+</head>
+<body class="text-gray-800">
+
+<header class="bg-white/90 m-5 p-5 rounded-2xl shadow-md">
+  <img src="https://github.com/Per-Arredondo/Clinica_medica/blob/main/Fondo%20JPG.jpeg?raw=true" class="mx-auto mb-5 w-48" alt="Logo">
+  <h1 class="text-3xl text-purple-900 text-center font-bold">Conoce-T Centro Psicológico y Psicoanalítico</h1>
+</header>
+
+<section class="bg-white/90 m-5 p-5 rounded-2xl shadow-md">
+  <h2 class="text-2xl text-purple-800 font-semibold">¿Quiénes somos?</h2>
+  <p>Somos un espacio dedicado a la Supervisión y crecimiento de terapeutas, así como el acompañamiento de quienes buscan conocerse y sanar a través del psicoanálisis...</p>
+</section>
+
+<section class="bg-white/90 m-5 p-5 rounded-2xl shadow-md">
+  <h2 class="text-2xl text-purple-800 font-semibold">Misión</h2>
+  <p>Refinar la manera en que los terapeutas comprenden a sus pacientes...</p>
+</section>
+
+<section class="bg-white/90 m-5 p-5 rounded-2xl shadow-md">
+  <h2 class="text-2xl text-purple-800 font-semibold">Visión</h2>
+  <p>Ser una clínica referente por excelencia, trato humano y compromiso con la salud mental.</p>
+</section>
+
+<section class="bg-white/90 m-5 p-5 rounded-2xl shadow-md">
+  <h2 class="text-2xl text-purple-800 font-semibold">Valores</h2>
+  <ul class="list-disc list-inside">
+    <li>Compromiso con la salud mental</li>
+    <li>Reflexión y análisis constante</li>
+    <li>Ética y profesionalismo</li>
+    <li>Crecimiento personal y profesional</li>
+  </ul>
+</section>
+
+<section class="bg-white/90 m-5 p-5 rounded-2xl shadow-md">
+  <h2 class="text-2xl text-purple-800 font-semibold">Especialidades</h2>
+  <button class="accordion">Psicoterapia para Parejas</button>
+  <div class="panel"><p>Aborda conflictos en la relación, promueve la comunicación asertiva, el entendimiento emocional y el fortalecimiento del vínculo entre ambos miembros de la pareja.</p></div>
+
+  <button class="accordion">Psicoterapia para Niños</button>
+  <div class="panel"><p>Intervenciones adaptadas a la edad para ayudar a los niños a expresar sus emociones, resolver traumas tempranos y apoyar su desarrollo emocional saludable.</p></div>
+
+  <button class="accordion">Psicoterapia para Adolescentes</button>
+  <div class="panel"><p>Apoya el manejo de cambios emocionales y sociales propios de la adolescencia, promoviendo una identidad sólida y habilidades para enfrentar desafíos cotidianos.</p></div>
+
+  <button class="accordion">Psicoterapia Individual</button>
+  <div class="panel"><p>Proceso de análisis profundo para resolver conflictos internos, mejorar el bienestar psicológico y fomentar el autoconocimiento del paciente.</p></div>
+
+  <button class="accordion">Supervisión de Casos Clínicos</button>
+  <div class="panel"><p>Espacio para psicoterapeutas que buscan revisar sus intervenciones, mejorar su práctica clínica y recibir retroalimentación profesional en un entorno ético y de confianza.</p></div>
+</section>
+
+<section class="bg-white/90 m-5 p-5 rounded-2xl shadow-md">
+  <h2 class="text-2xl text-purple-800 font-semibold">Agendar Cita</h2>
+  <form id="formularioCita" class="space-y-3">
+    <input type="text" name="nombre" placeholder="Nombre completo" required class="w-full border p-2 rounded-lg">
+    <input type="tel" name="telefono" pattern="\d{10}" placeholder="Teléfono (10 dígitos)" required class="w-full border p-2 rounded-lg">
+    <input type="email" name="correo" placeholder="Correo electrónico" required class="w-full border p-2 rounded-lg">
+    <select name="sexo" required class="w-full border p-2 rounded-lg">
+      <option value="">Sexo</option>
+      <option>Femenino</option>
+      <option>Masculino</option>
+      <option>Otro</option>
+    </select>
+    <select name="tipo_terapia" required class="w-full border p-2 rounded-lg">
+      <option value="">Tipo de Terapia</option>
+      <option>Psicoterapia para Parejas</option>
+      <option>Psicoterapia para Niños</option>
+      <option>Psicoterapia para Adolescentes</option>
+      <option>Psicoterapia Individual</option>
+      <option>Supervisión de Casos Clínicos</option>
+    </select>
+    <input type="text" name="motivo" placeholder="Motivo de cita" required class="w-full border p-2 rounded-lg">
+    <input type="text" name="enfermedad_cronica" placeholder="¿Padece alguna enfermedad crónica?" class="w-full border p-2 rounded-lg">
+    <select name="nivel_urgencia" required class="w-full border p-2 rounded-lg">
+      <option value="">Nivel de Urgencia</option>
+      <option>Bajo</option>
+      <option>Medio</option>
+      <option>Alto</option>
+    </select>
+    <input type="date" name="fecha" required class="w-full border p-2 rounded-lg">
+    <input type="time" name="hora" required class="w-full border p-2 rounded-lg">
+    <textarea name="comentarios" placeholder="Comentarios adicionales" class="w-full border p-2 rounded-lg"></textarea>
+    <button type="submit" class="bg-purple-600 text-white px-4 py-2 rounded-lg">Agendar</button>
+    <div id="mensajeConfirmacion" class="success text-green-600 mt-2 hidden"></div>
+  </form>
+  <p class="mt-3">También puedes contactarnos por WhatsApp: <strong>5523134325</strong></p>
+</section>
+
+<section class="bg-white/90 m-5 p-5 rounded-2xl shadow-md">
+  <h2 class="text-2xl text-purple-800 font-semibold">Síguenos en Nuestras Redes Sociales</h2>
+  <div class="space-x-4">
+    <a href="https://instagram.com/conocet.psi?igsh=MWhnMXhkcHI1aGU0Yg==" target="_blank">Instagram</a>
+    <a href="https://facebook.com/profile.php?id=100041276426768&mibextid=ZbWKwL" target="_blank">Facebook</a>
+    <a href="https://youtube.com/@danarova1?si=iAvCTihSSI7VcsCq" target="_blank">YouTube</a>
+    <a href="https://tiktok.com/@centroconocet?_t=8nOLvJV1PYT&_r=1" target="_blank">TikTok</a>
+  </div>
+</section>
+
+<script>
+  document.querySelectorAll('.accordion').forEach(btn => {
+    btn.addEventListener('click', () => {
+      const panel = btn.nextElementSibling;
+      panel.classList.toggle('hidden');
+    });
+  });
+
+  document.getElementById('formularioCita').addEventListener('submit', function(e) {
+    e.preventDefault();
+    const data = new FormData(this);
+    fetch('https://script.google.com/macros/s/AKfycbwqkIOnrvtAlrmEtrGKkGku2HvRWF5fkBIkEIxtMuOcVLEMJiTs28IfXWPCAhge6m1Kow/exec', {
+      method: 'POST',
+      body: data
+    })
+    .then(res => res.text())
+    .then(() => {
+      const msg = document.getElementById('mensajeConfirmacion');
+      msg.innerHTML = '✅ Gracias, tu cita ha sido agendada.<br>⏳ Redirigiendo al inicio...<br>🎉 Te contactaremos pronto.';
+      msg.classList.remove('hidden');
+      this.reset();
+      setTimeout(() => {
+        msg.classList.add('hidden');
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      }, 5000);
+    });
+  });
+</script>
+
+</body>
+</html>
+<!-- Una vez que esté listo me entregas el código. -->
